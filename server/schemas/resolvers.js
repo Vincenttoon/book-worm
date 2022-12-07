@@ -15,7 +15,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
   },
-  Mutations: {
+  Mutation: {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -38,11 +38,11 @@ const resolvers = {
 
       return { token, user };
     },
-    saveBook: async (parent, { book }, context) => {
+    saveBook: async (parent, { bookData }, context) => {
         if (context.user) {
-            const addSavedBook = await User.findOneAndUpdate(
+            const addSavedBook = await User.findByIdAndUpdate(
                 { _id: context.user._id },
-                { $addToSet: { savedBooks: book } },
+                { $push: { savedBooks: bookData } },
                 { new: true }
             );
             return addSavedBook;
