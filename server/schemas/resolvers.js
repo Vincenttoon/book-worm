@@ -3,6 +3,7 @@ const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
+  // query for user data
   Query: {
     me: async (parent, args, context) => {
       // check if user exists
@@ -15,6 +16,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
   },
+  // mutations of user data for web functionality, including: login, addUser, saveBook and RemoveBook
   Mutation: {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });

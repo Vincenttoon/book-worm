@@ -4,6 +4,7 @@ const secret = "mysecretsshhhhh";
 const expiration = "2h";
 
 module.exports = {
+  // middleware authentication function
   authMiddleware: function ({ req }) {
     // allows token to be sent via req.body, req.query, or headers
     let token = req.body.token || req.query.token || req.headers.authorization;
@@ -17,6 +18,7 @@ module.exports = {
       return req;
     }
 
+    // verifies JSON Web Token and matches it with data usage
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
@@ -26,6 +28,7 @@ module.exports = {
 
     return req;
   },
+  // assigns token to a user
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 

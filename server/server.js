@@ -6,6 +6,7 @@ const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 
+// imports typeDefs and resolvers into the apollo server\
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
@@ -23,6 +24,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
+// allows for graphql access
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });

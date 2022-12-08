@@ -25,12 +25,14 @@ const SavedBooks = () => {
       return false;
     }
 
+    // removes book by bookID
     try {
       const { user } = await removeBook({
         variables: {
           bookId: bookId,
         },
       });
+      // updates userData with adjusted user bookId's
       userData = user;
       removeBookId(bookId);
     } catch (err) {

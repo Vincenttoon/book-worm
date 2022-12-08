@@ -23,6 +23,7 @@ const SearchBooks = () => {
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
+  // uses mutation through apollo/react-hooks
   const [saveBook] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
@@ -75,6 +76,7 @@ const SearchBooks = () => {
       return false;
     }
 
+    // places book to save into the BookInput typeDef by using it's intern variable name
     try {
       const response = await saveBook({
         variables: {

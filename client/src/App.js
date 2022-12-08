@@ -11,10 +11,12 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
+// create http link for graphql usage
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
 
+// returns JWT token and confirms it matches with logged in user
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
   return {
@@ -25,6 +27,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// creates a new apollo client to function with matching token for access to applications full functionality
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
