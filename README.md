@@ -1,4 +1,54 @@
-# book-worm
+# Book Worm
+![Mason Bubba's Books](./assets/images/book-worm-mason.jpg)
+
+## License
+### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+### [MIT](https://opensource.org/licenses/MIT)
+
+## Description
+
+Uses a google api to call books. Logged in/signed up users can save books to their personal page for later reference and remove them when they are finished. This application is a full stack MERN application.
+
+By: [Vincent Toon](https://github.com/Vincenttoon)
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Live Deployment](#live-deployment)
+
+* [Usage](#usage)  
+
+* [User Story](#user-story)
+
+* [Technologies Learned](#technologies-learned)
+
+* [Acceptance Criteria](#acceptance-criteria)
+
+* [Contributors](#contributors)
+
+* [Questions?](#questions)
+
+## Installation
+
+* Head to the repository to download or view this code: [Book Worm](https://github.com/Vincenttoon/book-worm)
+
+## Live Deployment
+
+[live deployment link here](...)
+
+## Usage
+
+- Go to the repo
+- Download code
+- Run `npm run develop` and enjoy. 
+- Visit [live link](#live-deployment) for live capibilities.
+
+## Technologies Learned
+
+- [GraphQl Input Types](https://stackoverflow.com/questions/41743253/whats-the-point-of-input-type-in-graphql)
+
+- [Further understanding of spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ### User Story
 
@@ -37,3 +87,12 @@
 - THEN that book is deleted from my saved books list
 - WHEN I click on the Logout button
 - THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
+
+## Contributors
+
+* n/a
+
+## Questions?
+
+Questions, comments, or concerns? Please Email me at:
+* vincenttoon22@gmail.com
