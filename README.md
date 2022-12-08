@@ -35,7 +35,7 @@ By: [Vincent Toon](https://github.com/Vincenttoon)
 
 ## Live Deployment
 
-[live deployment link here](...)
+[live deployment link here](https://salty-thicket-30850.herokuapp.com/)
 
 ## Usage
 
